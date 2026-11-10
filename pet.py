@@ -6,18 +6,18 @@ class Pet:
     # 클래스 변수
     count = 0   # 지금까지 입양한 펫 수를 기록
 
-class Pet:
+
     def __init__(self, name):
         self.name = name   # 이름
         self.hunger = 30   # 배고픔 (0 ~ 100)
         self.happy = 70    # 행복도 (0 ~ 100)
         self.energy = 70   # 에너지 (0 ~ 100)
         self.alive = True  
-        pet.count += 1
+        Pet.count += 1
 
     def __str__(self):
         state = self.mood() if self.alive else "떠남"
-        return (f"{self.name} {self.mood(state)}\n"
+        return (f"{self.name} {state}\n"
                 f"배고픔: {self.bar(self.hunger)} {self.hunger:>3}\n" 
                 f"행복도: {self.bar(self.happy)} {self.happy:>3}\n"
                 f"에너지: {self.bar(self.energy)} {self.energy:>3}\n")
